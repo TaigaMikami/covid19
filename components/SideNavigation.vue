@@ -50,7 +50,7 @@
 
       <footer class="SideNavigation-Footer">
         <div class="SideNavigation-Social">
-         <a
+          <a
             href="https://line.me/R/ti/p/%40846dqaku"
             target="_blank"
             rel="noopener noreferrer"
@@ -148,7 +148,7 @@ export default Vue.extend({
         },
         {
           icon: 'CovidIcon',
-          title: this.$t('新型コロナウイルス感染症が心配なときに'),
+          title: this.$t('新型コロナウイルス感染症対策動画'),
           link: this.localePath('/flow'),
           divider: true
         },
@@ -160,13 +160,13 @@ export default Vue.extend({
         {
           icon: 'mdi-account-multiple',
           title: this.$t('県民の皆様へ'),
-          link: 'https://www.pref.shimane.lg.jp/medical/yakuji/kansensyo/other/topics/bukan2020.html'
+          link:
+            'https://www.pref.shimane.lg.jp/medical/yakuji/kansensyo/other/topics/bukan2020.html'
         },
-        
+
         {
           title: this.$t('県内の中止又は延期するイベント等'),
-          link:
-            'https://www.kankou-shimane.com/news/13881.html'
+          link: 'https://www.kankou-shimane.com/news/13881.html'
         },
         {
           title: this.$t('知事からのメッセージ'),
