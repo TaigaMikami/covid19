@@ -34,7 +34,7 @@ jobs:
       - name: Create pull request
         id: cpr
         if: steps.genjson.outputs.changed == 'true'
-        users: peter-evans/create-pull-request@v2
+        uses: peter-evans/create-pull-request@v2
         with:
           token: ${{ secrets.SuperSecret }}
           commit-message: BOT; UPDATE DATA
