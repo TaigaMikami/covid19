@@ -22,6 +22,7 @@ jobs:
 
       - name: Crawler start
         id: genjson
+        run: |
           docker-compose run fetch_shimane_data
 
           if [ -z "$(git status --porcelain)" ]; then
