@@ -37,10 +37,10 @@
 </template>
 
 <script>
-import MainSummary from '@/data/main_summary.json'
-import InspectionPersons from '@/data/inspection_persons.json'
-import Patients from '@/data/patients.json'
-import PatinetsSummary from '@/data/patients_summary.json'
+import MainSummary from '@/crawler/data/main_summary.json'
+import InspectionPersons from '@/crawler/data/inspection_persons.json'
+import Patients from '@/crawler/data/patients.json'
+import PatinetsSummary from '@/crawler/data/patients_summary.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 import TestedCasesDetailsCard from '@/components/cards/TestedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'

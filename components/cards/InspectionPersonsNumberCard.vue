@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import InspectionPersons from '@/data/inspection_persons.json'
+import InspectionPersons from '@/crawler/data/inspection_persons.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 

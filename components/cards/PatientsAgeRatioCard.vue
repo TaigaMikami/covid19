@@ -15,7 +15,7 @@
 
 <script>
 import CircleChart from '@/components/CircleChart.vue'
-import PatientsAgeRatio from '@/data/patients_age_ratio.json'
+import PatientsAgeRatio from '@/crawler/data/patients_age_ratio.json'
 import formatVariableGraph from '@/utils/formatVariableGraph.ts'
 
 export default {

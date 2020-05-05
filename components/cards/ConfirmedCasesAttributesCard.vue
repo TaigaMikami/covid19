@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import Patients from '@/data/patients.json'
-import PatientsSummary from '@/data/patients_summary.json'
+import Patients from '@/crawler/data/patients.json'
+import PatientsSummary from '@/crawler/data/patients_summary.json'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import DataTable from '@/components/DataTable.vue'
