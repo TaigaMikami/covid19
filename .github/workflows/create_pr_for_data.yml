@@ -1,8 +1,6 @@
 name: auto_create_pr_for_data
 
-on:
-  schedule:
-    - cron: '0 10 * * *'
+on: push
 
 jobs:
   fetch_data:
