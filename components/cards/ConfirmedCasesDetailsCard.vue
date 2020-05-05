@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import MainSummary from '@/data/main_summary.json'
+import MainSummary from '@/crawler/data/main_summary.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import ConfirmedCasesCard from '@/components/ConfirmedCasesCard.vue'
 import ConfirmedCasesTable from '@/components/ConfirmedCasesTable.vue'

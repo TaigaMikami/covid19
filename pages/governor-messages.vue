@@ -24,7 +24,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
-import Message from '@/data/pref_message.json'
+import Message from '@/crawler/data/pref_message.json'
 import StaticCard from '@/components/StaticCard.vue'
 import PageHeader from '@/components/PageHeader.vue'
 import { convertDateToISO8601Format } from '~/utils/formatDate'

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
+import Data from '@/crawler/data/data.json'
 import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 
 export default {

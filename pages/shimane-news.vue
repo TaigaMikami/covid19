@@ -37,7 +37,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
-import News from '@/data/news.json'
+import News from '@/crawler/data/news.json'
 import StaticCard from '@/components/StaticCard.vue'
 import PageHeader from '@/components/PageHeader.vue'
 import { convertDateToISO8601Format } from '~/utils/formatDate'

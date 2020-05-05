@@ -26,7 +26,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
-import PlaceNews from '@/data/place_news.json'
+import PlaceNews from '@/crawler/data/place_news.json'
 import StaticCard from '@/components/StaticCard.vue'
 import PageHeader from '@/components/PageHeader.vue'
 

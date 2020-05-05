@@ -13,8 +13,8 @@
 import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
 import PageHeader from '@/components/PageHeader.vue'
-import Data from '@/data/data.json'
-import News from '@/data/news.json'
+import Data from '@/crawler/data/data.json'
+import News from '@/crawler/data/news.json'
 import TokyoCityMapCard from '@/components/cards/TokyoCityMapCard.vue'
 
 export default Vue.extend({

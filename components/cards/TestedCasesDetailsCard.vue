@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
+import Data from '@/crawler/data/data.json'
 import formatTestedCases from '@/utils/formatTestedCases'
 import TestedCasesCard from '@/components/TestedCasesCard.vue'
 import TestedCasesTable from '@/components/TestedCasesTable.vue'
