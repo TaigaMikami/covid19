@@ -1,9 +1,9 @@
-require 'nokogiri'
+require "bundler/setup"
+Bundler.require
 require 'open-uri'
 require 'json'
-require 'pry'
 
-json_file = "../data/inspection_persons.json"
+json_file = "./data/inspection_persons.json"
 
 if __FILE__ == $0
   url = 'https://www.pref.shimane.lg.jp/bousai_info/bousai/kikikanri/shingata_taisaku/new_coronavirus_portal.html'
