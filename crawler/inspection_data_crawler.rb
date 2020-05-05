@@ -24,11 +24,10 @@ if __FILE__ == $0
 
   # jsonファイルのlabelsとスクレイピング日付の比較
   if (update_date_time.day != json_date_time.day && update_date_time > json_date_time)
-    json_data['inspection_persons']['labels'].push(updateTime)
-    json_data['inspection_persons']['datasets'][0]['data'].push(insperson)
-  end
-
-  open(json_file, 'w') do |f|
-    JSON.dump(json_data, f)
+    json_data['inspection_persons']['labels'].push(update_time)
+    json_data['inspection_persons']['datasets'][0]['data'].push(insperson.to_i)
+    open(json_file, 'w') do |f|
+      JSON.dump(json_data, f)
+    end
   end
 end
