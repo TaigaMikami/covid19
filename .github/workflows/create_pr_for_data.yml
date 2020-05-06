@@ -2,7 +2,7 @@ name: auto_create_pr_for_data
 
 on:
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '0 10-13 * * *'
 
 jobs:
   fetch_data:
