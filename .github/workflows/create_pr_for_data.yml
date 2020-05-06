@@ -33,13 +33,13 @@ jobs:
           commit-message: BOT; UPDATE DATA
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          title: BOT; UPDATE DATE
+          title: '[BOT] UPDATE DATE'
           body: |
             New report
             - Contains *today's* date
             - Auto-generated
           reviewers: TaigaMikami
-          base: shimane
+          base: crawler-test
           branch: bot/update-data
       - name: Check outputs
         run: |
