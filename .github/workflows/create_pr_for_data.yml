@@ -34,7 +34,7 @@ jobs:
         if: steps.genjson.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v2
         with:
-          token: ${{ secrets.SuperSecret }}
+          token: ${{ secrets.SECRET_TOKEN }}
           commit-message: BOT; UPDATE DATA
           title: BOT; UPDATE DATE
           reviewers: TaigaMikami
