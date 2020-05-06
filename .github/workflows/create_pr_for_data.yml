@@ -1,4 +1,4 @@
-name: auto_create_pr_for_data
+name: Auto Create Pull Request For Data
 
 on: push
 
@@ -6,11 +6,6 @@ jobs:
   fetch_data:
     runs-on: ubuntu-18.04
     steps:
-      - name: Setting Git
-        run: |
-          git config --global user.name github-actions
-          git config --global user.email actions@github.com
-
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -36,9 +31,14 @@ jobs:
         with:
           token: ${{ secrets.SECRET_TOKEN }}
           commit-message: BOT; UPDATE DATA
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           title: BOT; UPDATE DATE
+          body: |
+            New report
+            - Contains *today's* date
+            - Auto-generated
           reviewers: TaigaMikami
-          path: shimane
           base: shimane
           branch: bot/update-data
       - name: Check outputs
