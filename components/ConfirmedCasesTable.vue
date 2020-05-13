@@ -67,77 +67,30 @@
             </li>
           </ul>
         </li>
-
-        <!-- <ul :class="$style.group"> -->
-          <li :class="[$style.box, $style.deceased]">
-            <div :class="$style.pillar">
-              <div :class="$style.content">
-                <span>{{ $t('死亡') }}</span>
-                <span>
-                  <strong>{{ 死亡 }}</strong>
-                  <span :class="$style.unit">{{ $t('人') }}</span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li :class="[$style.box, $style.recovered]">
-            <div :class="$style.pillar_recovered">
-              <div :class="$style.content">
-                <!-- eslint-disable vue/no-v-html -->
-                <span>{{ $t('退院') }}</span>
-                <!-- eslint-enable vue/no-v-html -->
-                <span>
-                  <strong>{{ 退院 }}</strong>
-                  <span :class="$style.unit">{{ $t('人') }}</span>
-                </span>
-              </div>
-            </div>
-          </li>
-
-        <!-- </ul> -->
-
-        <!--         
-        <li :class="[$style.box, $style.parent, $style.deceased]">
+        <li :class="[$style.box, $style.deceased]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              <span>{{ $t('退院') }}</span>
+              <span>{{ $t('死亡') }}</span>
               <span>
-                <strong>{{ 退院 + 死亡 }}</strong>
+                <strong>{{ 死亡 }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
           </div>
-          <ul :class="$style.group">
-            <li :class="[$style.box, $style.short, $style.minor]">
-              <div :class="$style.pillar">
-                <div :class="$style.content">
-                  eslint-disable vue/no-v-html
-                  <span>
-                  {{ $t('退院') }}
-                  <br />({{ $t('回復') }})
-                  </span>
-                  eslint-enable vue/no-v-html
-                  <span>
-                    <strong>{{ 退院 }}</strong>
-                    <span :class="$style.unit">{{ $t('人') }}</span>
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li :class="[$style.box, $style.short, $style.severe]">
-              <div :class="$style.pillar">
-                <div :class="$style.content">
-                  <span>{{ $t('死亡') }}</span>
-                  <span>
-                    <strong>{{ 死亡 }}</strong>
-                    <span :class="$style.unit">{{ $t('人') }}</span>
-                  </span>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li> -->
-
+        </li>
+        <li :class="[$style.box, $style.recovered]">
+          <div :class="$style.pillar_recovered">
+            <div :class="$style.content">
+              <!-- eslint-disable vue/no-v-html -->
+              <span>{{ $t('退院') }}</span>
+              <!-- eslint-enable vue/no-v-html -->
+              <span>
+                <strong>{{ 退院 }}</strong>
+                <span :class="$style.unit">{{ $t('人') }}</span>
+              </span>
+            </div>
+          </div>
+        </li>
         <!--
         <li :class="[$style.box, $style.unknown]">
           <div :class="$style.pillar_unknown">
@@ -257,15 +210,15 @@ $default-boxdiff: 35px;
   border: $default-bdw solid $green-1;
 }
 
-.pillar_tested {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex: 0 0 auto;
-  text-align: center;
-  width: 100%;
-  border: $default-bdw solid $gray-1;
-}
+// .pillar_tested {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   flex: 0 0 auto;
+//   text-align: center;
+//   width: 100%;
+//   border: $default-bdw solid $gray-1;
+// }
 
 .pillar_recovered {
   display: flex;
@@ -277,15 +230,15 @@ $default-boxdiff: 35px;
   border: $default-bdw solid $pink-1;
 }
 
-.pillar_unknown {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex: 0 0 auto;
-  text-align: center;
-  width: 100%;
-  border: $default-bdw solid $gray-3;
-}
+// .pillar_unknown {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   flex: 0 0 auto;
+//   text-align: center;
+//   width: 100%;
+//   border: $default-bdw solid $gray-3;
+// }
 
 .group {
   display: flex;
@@ -323,13 +276,13 @@ $default-boxdiff: 35px;
     }
   }
 
-  &.tested {
-    display: flex;
-    flex: 0 0 auto;
-    // [6列] 1/6
-    width: calc((100% - #{$default-bdw} * 3) / 6);
-    color: $gray-1;
-  }
+  // &.tested {
+  //   display: flex;
+  //   flex: 0 0 auto;
+  //   // [6列] 1/6
+  //   width: calc((100% - #{$default-bdw} * 3) / 6);
+  //   color: $gray-1;
+  // }
 
   &.confirmed {
     margin-left: $default-bdw;
@@ -348,7 +301,7 @@ $default-boxdiff: 35px;
 
   &.hospitalized {
     margin-left: $default-bdw;
-    // [7列] 3/7
+    // [5列] 3/5
     width: calc(100% / 5 * 3 - #{$default-bdw});
 
     > .pillar {
@@ -387,23 +340,23 @@ $default-boxdiff: 35px;
 
   &.deceased {
     margin-left: $default-bdw;
-    // [2列] 1/2
+    // [5列] 1/5
     width: calc(100% / 5 - #{$default-bdw});
   }
 
   &.recovered {
     margin-left: $default-bdw;
     color:$pink-1;
-    // [2列] 1/2
+    // [5列] 1/5
     width: calc(100% / 5 - #{$default-bdw});
   }
 
-  &.unknown {
-    margin-left: $default-bdw;
-    color:$gray-1;
-    // [4列] 1/4
-    width: calc(100% / 4 - #{$default-bdw});
-  }
+  // &.unknown {
+  //   margin-left: $default-bdw;
+  //   color:$gray-1;
+  //   // [4列] 1/4
+  //   width: calc(100% / 4 - #{$default-bdw});
+  // }
 }
 
 .content {
@@ -552,10 +505,10 @@ $default-boxdiff: 35px;
       width: calc(100% / 5 - #{px2vw($bdw, $vw)});
     }
 
-    &.unknown {
-      margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 4 - #{px2vw($bdw, $vw)});
-    }
+    // &.unknown {
+    //   margin-left: px2vw($bdw, $vw);
+    //   width: calc(100% / 4 - #{px2vw($bdw, $vw)});
+    // }
   }
 }
 
