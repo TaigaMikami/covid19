@@ -69,7 +69,7 @@
         </li>
 
         <!-- <ul :class="$style.group"> -->
-          <li :class="[$style.box, $style.severe]">
+          <li :class="[$style.box, $style.deceased]">
             <div :class="$style.pillar">
               <div :class="$style.content">
                 <span>{{ $t('死亡') }}</span>
@@ -349,7 +349,7 @@ $default-boxdiff: 35px;
   &.hospitalized {
     margin-left: $default-bdw;
     // [7列] 3/7
-    width: calc(100% / 7 * 4 - #{$default-bdw});
+    width: calc(100% / 5 * 3 - #{$default-bdw});
 
     > .pillar {
       // [3列] 1/3
@@ -362,21 +362,21 @@ $default-boxdiff: 35px;
     }
   }
 
-  &.deceased {
-    margin-left: $default-bdw;
-    // [7列] 3/7
-    width: calc(100% / 7 * 4 - #{$default-bdw});
+  // &.deceased {
+  //   margin-left: $default-bdw;
+  //   // [7列] 3/7
+  //   width: calc(100% / 6 * 3 - #{$default-bdw});
 
-    > .pillar {
-      // [3列] 1/3
-      width: calc((100% + #{$default-bdw} * 2) / 3 - #{$default-bdw} * 3);
-    }
+  //   > .pillar {
+  //     // [3列] 1/3
+  //     width: calc((100% + #{$default-bdw} * 2) / 3 - #{$default-bdw} * 3);
+  //   }
 
-    > .group {
-      // [3列] 2/3
-      width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
-    }
-  }
+  //   > .group {
+  //     // [3列] 2/3
+  //     width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
+  //   }
+  // }
 
   &.minor,
   &.severe {
@@ -385,11 +385,17 @@ $default-boxdiff: 35px;
     width: calc(100% / 2 - #{$default-bdw});
   }
 
+  &.deceased {
+    margin-left: $default-bdw;
+    // [2列] 1/2
+    width: calc(100% / 5 - #{$default-bdw});
+  }
+
   &.recovered {
     margin-left: $default-bdw;
     color:$pink-1;
     // [2列] 1/2
-    width: calc(100% / 2 - #{$default-bdw});
+    width: calc(100% / 5 - #{$default-bdw});
   }
 
   &.unknown {
@@ -499,7 +505,7 @@ $default-boxdiff: 35px;
 
     &.hospitalized {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 7 * 4 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
 
       > .pillar {
         width: calc(
@@ -513,22 +519,22 @@ $default-boxdiff: 35px;
         );
       }
     }
-    &.deceased {
-      margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 7 * 4 - #{px2vw($bdw, $vw)});
+    // &.deceased {
+    //   margin-left: px2vw($bdw, $vw);
+    //   width: calc(100% / 6 * 4 - #{px2vw($bdw, $vw)});
 
-      > .pillar {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 3 - #{px2vw($bdw, $vw)} * 3
-        );
-      }
+    //   > .pillar {
+    //     width: calc(
+    //       (100% + #{px2vw($bdw, $vw)} * 2) / 3 - #{px2vw($bdw, $vw)} * 3
+    //     );
+    //   }
 
-      > .group {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
-        );
-      }
-    }
+    //   > .group {
+    //     width: calc(
+    //       (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
+    //     );
+    //   }
+    // }
 
     &.minor,
     &.severe {
@@ -536,9 +542,14 @@ $default-boxdiff: 35px;
       width: calc(100% / 2 - #{px2vw($bdw, $vw)});
     }
 
+    &.deceased {
+      margin-left: px2vw($bdw, $vw);
+      width: calc(100% / 5 - #{px2vw($bdw, $vw)});
+    }
+
     &.recovered {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 2 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 5 - #{px2vw($bdw, $vw)});
     }
 
     &.unknown {
