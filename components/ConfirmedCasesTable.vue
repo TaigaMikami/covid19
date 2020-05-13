@@ -1,5 +1,6 @@
 <template>
   <ul :class="$style.container">
+    <!--
     <li :class="[$style.box, $style.tall, $style.tested]">
       <div :class="$style.pillar_tested">
         <div :class="$style.content">
@@ -14,6 +15,7 @@
         </div>
       </div>
     </li>
+     -->
     <li :class="[$style.box, $style.tall, $style.parent, $style.confirmed]">
       <div :class="$style.pillar">
         <div :class="$style.content">
@@ -27,32 +29,24 @@
           </span>
         </div>
       </div>
-      <!--
       <ul :class="$style.group">
         <li :class="[$style.box, $style.parent, $style.hospitalized]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              -->
-      <ul :class="$style.group">
-        <li :class="[$style.box, $style.deceased]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
               <span>{{ $t('入院中') }}</span>
               <span>
-                <!-- <strong>{{ 入院中 }}</strong> -->
                 <strong>{{ 重症 + 軽症中等症 }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
           </div>
-          <!--
           <ul :class="$style.group">
             <li :class="[$style.box, $style.short, $style.minor]">
               <div :class="$style.pillar">
                 <div :class="$style.content">
-                  eslint-disable vue/no-v-html
+                  <!-- eslint-disable vue/no-v-html -->
                   <span v-html="$t('軽症・<br />中等症')" />
-                  eslint-enable vue/no-v-html
+                  <!-- eslint-enable vue/no-v-html -->
                   <span>
                     <strong>{{ 軽症中等症 }}</strong>
                     <span :class="$style.unit">{{ $t('人') }}</span>
@@ -72,31 +66,48 @@
               </div>
             </li>
           </ul>
-          -->
         </li>
-        <li :class="[$style.box, $style.deceased]">
+        <li :class="[$style.box, $style.parent, $style.hospitalized]">
           <div :class="$style.pillar">
-            <div :class="$style.content">
-              <span>{{ $t('死亡') }}</span>
-              <span>
-                <strong>{{ 死亡 }}</strong>
-                <span :class="$style.unit">{{ $t('人') }}</span>
-              </span>
-            </div>
-          </div>
-        </li>
-        <li :class="[$style.box, $style.recovered]">
-          <div :class="$style.pillar_recovered">
             <div :class="$style.content">
               <span>{{ $t('退院') }}</span>
               <span>
-                <strong>{{ 退院 }}</strong>
+                <strong>{{ 退院 + 死亡 }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
           </div>
+          <ul :class="$style.group">
+            <li :class="[$style.box, $style.short, $style.minor]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <!-- eslint-disable vue/no-v-html -->
+                  <span>
+                  {{ $t('退院') }}
+                  <br />({{ $t('回復') }})
+                  </span>
+                  <!-- eslint-enable vue/no-v-html -->
+                  <span>
+                    <strong>{{ 退院 }}</strong>
+                    <span :class="$style.unit">{{ $t('人') }}</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li :class="[$style.box, $style.short, $style.severe]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <span>{{ $t('死亡') }}</span>
+                  <span>
+                    <strong>{{ 死亡 }}</strong>
+                    <span :class="$style.unit">{{ $t('人') }}</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
         </li>
-        
+        <!--
         <li :class="[$style.box, $style.unknown]">
           <div :class="$style.pillar_unknown">
             <div :class="$style.content">
@@ -108,7 +119,7 @@
             </div>
           </div>
         </li>
-       
+        -->
       </ul>
     </li>
   </ul>
@@ -304,23 +315,23 @@ $default-boxdiff: 35px;
     }
   }
 
-  // &.hospitalized {
-  //   margin-left: $default-bdw;
-  //   // [5列] 3/5
-  //   // ここと
-  //   width: calc(100% / 5 * 3 - #{$default-bdw});
+  &.hospitalized {
+    margin-left: $default-bdw;
+    // [5列] 3/5
+    // ここと
+    width: calc(100% / 5 * 3 - #{$default-bdw});
 
-  //   > .pillar {
-  //     // [3列] 1/3
-  //     width: calc((100% + #{$default-bdw} * 2) / 3 - #{$default-bdw} * 3);
-  //   }
+    > .pillar {
+      // [3列] 1/3
+      width: calc((100% + #{$default-bdw} * 2) / 3 - #{$default-bdw} * 3);
+    }
 
-  //   > .group {
-  //     // [3列] 2/3
-  //     width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
-  //   }
-  // }
-  &.hospitalized,
+    > .group {
+      // [3列] 2/3
+      width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
+    }
+  }
+  //&.hospitalized,
   &.deceased {
     margin-left: $default-bdw;
     // [4列] 1/4
@@ -446,24 +457,24 @@ $default-boxdiff: 35px;
       }
     }
 
-    // &.hospitalized {
-    //   margin-left: px2vw($bdw, $vw);
-    //   width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
+    &.hospitalized {
+      margin-left: px2vw($bdw, $vw);
+      width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
 
-    //   > .pillar {
-    //     width: calc(
-    //       (100% + #{px2vw($bdw, $vw)} * 2) / 3 - #{px2vw($bdw, $vw)} * 3
-    //     );
-    //   }
+      > .pillar {
+        width: calc(
+          (100% + #{px2vw($bdw, $vw)} * 2) / 3 - #{px2vw($bdw, $vw)} * 3
+        );
+      }
 
-    //   > .group {
-    //     width: calc(
-    //       (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
-    //     );
-    //   }
-    // }
+      > .group {
+        width: calc(
+          (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
+        );
+      }
+    }
 
-    &.hospitalized,
+    //&.hospitalized,
     &.deceased {
       margin-left: px2vw($bdw, $vw);
       width: calc(100% / 4 - #{px2vw($bdw, $vw)});
