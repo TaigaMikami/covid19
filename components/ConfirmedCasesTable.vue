@@ -67,6 +67,36 @@
             </li>
           </ul>
         </li>
+
+        <!-- <ul :class="$style.group"> -->
+          <li :class="[$style.box, $style.severe]">
+            <div :class="$style.pillar">
+              <div :class="$style.content">
+                <span>{{ $t('死亡') }}</span>
+                <span>
+                  <strong>{{ 死亡 }}</strong>
+                  <span :class="$style.unit">{{ $t('人') }}</span>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li :class="[$style.box, $style.recovered]">
+            <div :class="$style.pillar_recovered">
+              <div :class="$style.content">
+                <!-- eslint-disable vue/no-v-html -->
+                <span>{{ $t('退院') }}</span>
+                <!-- eslint-enable vue/no-v-html -->
+                <span>
+                  <strong>{{ 退院 }}</strong>
+                  <span :class="$style.unit">{{ $t('人') }}</span>
+                </span>
+              </div>
+            </div>
+          </li>
+
+        <!-- </ul> -->
+
+        <!--         
         <li :class="[$style.box, $style.parent, $style.deceased]">
           <div :class="$style.pillar">
             <div :class="$style.content">
@@ -81,12 +111,12 @@
             <li :class="[$style.box, $style.short, $style.minor]">
               <div :class="$style.pillar">
                 <div :class="$style.content">
-                  <!-- eslint-disable vue/no-v-html -->
+                  eslint-disable vue/no-v-html
                   <span>
                   {{ $t('退院') }}
                   <br />({{ $t('回復') }})
                   </span>
-                  <!-- eslint-enable vue/no-v-html -->
+                  eslint-enable vue/no-v-html
                   <span>
                     <strong>{{ 退院 }}</strong>
                     <span :class="$style.unit">{{ $t('人') }}</span>
@@ -106,7 +136,8 @@
               </div>
             </li>
           </ul>
-        </li>
+        </li> -->
+
         <!--
         <li :class="[$style.box, $style.unknown]">
           <div :class="$style.pillar_unknown">
