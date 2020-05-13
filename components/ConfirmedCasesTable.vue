@@ -305,21 +305,20 @@ $default-boxdiff: 35px;
     width: 100%;
 
     > .pillar {
-      // [5列] 1/5
-      width: calc((100% + #{$default-bdw} * 3) / 5 - #{$default-bdw} * 3);
+      // [6列] 1/6
+      width: calc((100% + #{$default-bdw} * 3) / 6 - #{$default-bdw} * 3);
     }
 
     > .group {
-      // [5列] 4/5
-      width: calc((100% + #{$default-bdw} * 2) / 5 * 4 + #{$default-bdw});
+      // [6列] 5/6
+      width: calc((100% + #{$default-bdw} * 2) / 6 * 5 + #{$default-bdw});
     }
   }
 
   &.hospitalized {
     margin-left: $default-bdw;
-    // [5列] 3/5
-    // ここと
-    width: calc(100% / 5 * 3 - #{$default-bdw});
+    // [7列] 3/7
+    width: calc(100% / 7 * 4 - #{$default-bdw});
 
     > .pillar {
       // [3列] 1/3
@@ -334,9 +333,8 @@ $default-boxdiff: 35px;
 
   &.deceased {
     margin-left: $default-bdw;
-    // [5列] 3/5
-    // ここと
-    width: calc(100% / 5 * 3 - #{$default-bdw});
+    // [7列] 3/7
+    width: calc(100% / 7 * 4 - #{$default-bdw});
 
     > .pillar {
       // [3列] 1/3
@@ -349,13 +347,6 @@ $default-boxdiff: 35px;
     }
   }
 
-  //&.hospitalized,
-  // &.deceased {
-  //   margin-left: $default-bdw;
-  //   // [4列] 1/4
-  //   width: calc(100% / 4 - #{$default-bdw});
-  // }
-
   &.minor,
   &.severe {
     margin-left: $default-bdw;
@@ -366,8 +357,8 @@ $default-boxdiff: 35px;
   &.recovered {
     margin-left: $default-bdw;
     color:$pink-1;
-    // [4列] 1/4
-    width: calc(100% / 4 - #{$default-bdw});
+    // [2列] 1/2
+    width: calc(100% / 2 - #{$default-bdw});
   }
 
   &.unknown {
@@ -464,20 +455,20 @@ $default-boxdiff: 35px;
       margin-left: px2vw($bdw, $vw);
       > .pillar {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 3) / 5 - #{px2vw($bdw, $vw)} * 3
+          (100% + #{px2vw($bdw, $vw)} * 3) / 6 - #{px2vw($bdw, $vw)} * 3
         );
       }
 
       > .group {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 5 * 4 + #{px2vw($bdw, $vw)} 
+          (100% + #{px2vw($bdw, $vw)} * 2) / 6 * 5 + #{px2vw($bdw, $vw)} 
         );
       }
     }
 
     &.hospitalized {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 7 * 4 - #{px2vw($bdw, $vw)});
 
       > .pillar {
         width: calc(
@@ -493,7 +484,7 @@ $default-boxdiff: 35px;
     }
     &.deceased {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 7 * 4 - #{px2vw($bdw, $vw)});
 
       > .pillar {
         width: calc(
@@ -507,11 +498,6 @@ $default-boxdiff: 35px;
         );
       }
     }
-    //&.hospitalized,
-    // &.deceased {
-    //   margin-left: px2vw($bdw, $vw);
-    //   width: calc(100% / 4 - #{px2vw($bdw, $vw)});
-    // }
 
     &.minor,
     &.severe {
@@ -521,7 +507,7 @@ $default-boxdiff: 35px;
 
     &.recovered {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 4 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 2 - #{px2vw($bdw, $vw)});
     }
 
     &.unknown {
