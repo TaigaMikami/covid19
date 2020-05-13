@@ -67,7 +67,7 @@
             </li>
           </ul>
         </li>
-        <li :class="[$style.box, $style.parent, $style.hospitalized]">
+        <li :class="[$style.box, $style.parent, $style.deceased]">
           <div :class="$style.pillar">
             <div :class="$style.content">
               <span>{{ $t('退院') }}</span>
@@ -331,12 +331,30 @@ $default-boxdiff: 35px;
       width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
     }
   }
-  //&.hospitalized,
+
   &.deceased {
     margin-left: $default-bdw;
-    // [4列] 1/4
-    width: calc(100% / 4 - #{$default-bdw});
+    // [5列] 3/5
+    // ここと
+    width: calc(100% / 5 * 3 - #{$default-bdw});
+
+    > .pillar {
+      // [3列] 1/3
+      width: calc((100% + #{$default-bdw} * 2) / 3 - #{$default-bdw} * 3);
+    }
+
+    > .group {
+      // [3列] 2/3
+      width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
+    }
   }
+
+  //&.hospitalized,
+  // &.deceased {
+  //   margin-left: $default-bdw;
+  //   // [4列] 1/4
+  //   width: calc(100% / 4 - #{$default-bdw});
+  // }
 
   &.minor,
   &.severe {
@@ -473,12 +491,27 @@ $default-boxdiff: 35px;
         );
       }
     }
-
-    //&.hospitalized,
     &.deceased {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 4 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
+
+      > .pillar {
+        width: calc(
+          (100% + #{px2vw($bdw, $vw)} * 2) / 3 - #{px2vw($bdw, $vw)} * 3
+        );
+      }
+
+      > .group {
+        width: calc(
+          (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
+        );
+      }
     }
+    //&.hospitalized,
+    // &.deceased {
+    //   margin-left: px2vw($bdw, $vw);
+    //   width: calc(100% / 4 - #{px2vw($bdw, $vw)});
+    // }
 
     &.minor,
     &.severe {
