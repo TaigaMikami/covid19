@@ -1,5 +1,6 @@
 <template>
   <ul :class="$style.container">
+    <!--
     <li :class="[$style.box, $style.tall, $style.tested]">
       <div :class="$style.pillar_tested">
         <div :class="$style.content">
@@ -14,6 +15,7 @@
         </div>
       </div>
     </li>
+     -->
     <li :class="[$style.box, $style.tall, $style.parent, $style.confirmed]">
       <div :class="$style.pillar">
         <div :class="$style.content">
@@ -27,32 +29,24 @@
           </span>
         </div>
       </div>
-      <!--
       <ul :class="$style.group">
         <li :class="[$style.box, $style.parent, $style.hospitalized]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              -->
-      <ul :class="$style.group">
-        <li :class="[$style.box, $style.deceased]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
               <span>{{ $t('入院中') }}</span>
               <span>
-                <!-- <strong>{{ 入院中 }}</strong> -->
                 <strong>{{ 重症 + 軽症中等症 }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
           </div>
-          <!--
           <ul :class="$style.group">
             <li :class="[$style.box, $style.short, $style.minor]">
               <div :class="$style.pillar">
                 <div :class="$style.content">
-                  eslint-disable vue/no-v-html
+                  <!-- eslint-disable vue/no-v-html -->
                   <span v-html="$t('軽症・<br />中等症')" />
-                  eslint-enable vue/no-v-html
+                  <!-- eslint-enable vue/no-v-html -->
                   <span>
                     <strong>{{ 軽症中等症 }}</strong>
                     <span :class="$style.unit">{{ $t('人') }}</span>
@@ -72,7 +66,6 @@
               </div>
             </li>
           </ul>
-          -->
         </li>
         <li :class="[$style.box, $style.deceased]">
           <div :class="$style.pillar">
@@ -88,7 +81,9 @@
         <li :class="[$style.box, $style.recovered]">
           <div :class="$style.pillar_recovered">
             <div :class="$style.content">
+              <!-- eslint-disable vue/no-v-html -->
               <span>{{ $t('退院') }}</span>
+              <!-- eslint-enable vue/no-v-html -->
               <span>
                 <strong>{{ 退院 }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
@@ -96,7 +91,7 @@
             </div>
           </div>
         </li>
-        
+        <!--
         <li :class="[$style.box, $style.unknown]">
           <div :class="$style.pillar_unknown">
             <div :class="$style.content">
@@ -108,7 +103,7 @@
             </div>
           </div>
         </li>
-       
+        -->
       </ul>
     </li>
   </ul>
@@ -215,15 +210,15 @@ $default-boxdiff: 35px;
   border: $default-bdw solid $green-1;
 }
 
-.pillar_tested {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex: 0 0 auto;
-  text-align: center;
-  width: 100%;
-  border: $default-bdw solid $gray-1;
-}
+// .pillar_tested {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   flex: 0 0 auto;
+//   text-align: center;
+//   width: 100%;
+//   border: $default-bdw solid $gray-1;
+// }
 
 .pillar_recovered {
   display: flex;
@@ -235,15 +230,15 @@ $default-boxdiff: 35px;
   border: $default-bdw solid $pink-1;
 }
 
-.pillar_unknown {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex: 0 0 auto;
-  text-align: center;
-  width: 100%;
-  border: $default-bdw solid $gray-3;
-}
+// .pillar_unknown {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   flex: 0 0 auto;
+//   text-align: center;
+//   width: 100%;
+//   border: $default-bdw solid $gray-3;
+// }
 
 .group {
   display: flex;
@@ -281,34 +276,49 @@ $default-boxdiff: 35px;
     }
   }
 
-  &.tested {
-    display: flex;
-    flex: 0 0 auto;
-    // [6列] 1/6
-    width: calc((100% - #{$default-bdw} * 3) / 6);
-    color: $gray-1;
-  }
+  // &.tested {
+  //   display: flex;
+  //   flex: 0 0 auto;
+  //   // [6列] 1/6
+  //   width: calc((100% - #{$default-bdw} * 3) / 6);
+  //   color: $gray-1;
+  // }
 
   &.confirmed {
     margin-left: $default-bdw;
     width: 100%;
 
     > .pillar {
-      // [5列] 1/5
-      width: calc((100% + #{$default-bdw} * 3) / 5 - #{$default-bdw} * 3);
+      // [6列] 1/6
+      width: calc((100% + #{$default-bdw} * 3) / 6 - #{$default-bdw} * 3);
     }
 
     > .group {
-      // [5列] 4/5
-      width: calc((100% + #{$default-bdw} * 2) / 5 * 4 + #{$default-bdw});
+      // [6列] 5/6
+      width: calc((100% + #{$default-bdw} * 2) / 6 * 5 + #{$default-bdw});
     }
   }
 
-  // &.hospitalized {
+  &.hospitalized {
+    margin-left: $default-bdw;
+    // [5列] 3/5
+    width: calc(100% / 5 * 3 - #{$default-bdw});
+
+    > .pillar {
+      // [3列] 1/3
+      width: calc((100% + #{$default-bdw} * 2) / 3 - #{$default-bdw} * 3);
+    }
+
+    > .group {
+      // [3列] 2/3
+      width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
+    }
+  }
+
+  // &.deceased {
   //   margin-left: $default-bdw;
-  //   // [5列] 3/5
-  //   // ここと
-  //   width: calc(100% / 5 * 3 - #{$default-bdw});
+  //   // [7列] 3/7
+  //   width: calc(100% / 6 * 3 - #{$default-bdw});
 
   //   > .pillar {
   //     // [3列] 1/3
@@ -320,12 +330,6 @@ $default-boxdiff: 35px;
   //     width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
   //   }
   // }
-  &.hospitalized,
-  &.deceased {
-    margin-left: $default-bdw;
-    // [4列] 1/4
-    width: calc(100% / 4 - #{$default-bdw});
-  }
 
   &.minor,
   &.severe {
@@ -334,19 +338,25 @@ $default-boxdiff: 35px;
     width: calc(100% / 2 - #{$default-bdw});
   }
 
+  &.deceased {
+    margin-left: $default-bdw;
+    // [5列] 1/5
+    width: calc(100% / 5 - #{$default-bdw});
+  }
+
   &.recovered {
     margin-left: $default-bdw;
     color:$pink-1;
-    // [4列] 1/4
-    width: calc(100% / 4 - #{$default-bdw});
+    // [5列] 1/5
+    width: calc(100% / 5 - #{$default-bdw});
   }
 
-  &.unknown {
-    margin-left: $default-bdw;
-    color:$gray-1;
-    // [4列] 1/4
-    width: calc(100% / 4 - #{$default-bdw});
-  }
+  // &.unknown {
+  //   margin-left: $default-bdw;
+  //   color:$gray-1;
+  //   // [4列] 1/4
+  //   width: calc(100% / 4 - #{$default-bdw});
+  // }
 }
 
 .content {
@@ -435,20 +445,36 @@ $default-boxdiff: 35px;
       margin-left: px2vw($bdw, $vw);
       > .pillar {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 3) / 5 - #{px2vw($bdw, $vw)} * 3
+          (100% + #{px2vw($bdw, $vw)} * 3) / 6 - #{px2vw($bdw, $vw)} * 3
         );
       }
 
       > .group {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 5 * 4 + #{px2vw($bdw, $vw)} 
+          (100% + #{px2vw($bdw, $vw)} * 2) / 6 * 5 + #{px2vw($bdw, $vw)} 
         );
       }
     }
 
-    // &.hospitalized {
+    &.hospitalized {
+      margin-left: px2vw($bdw, $vw);
+      width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
+
+      > .pillar {
+        width: calc(
+          (100% + #{px2vw($bdw, $vw)} * 2) / 3 - #{px2vw($bdw, $vw)} * 3
+        );
+      }
+
+      > .group {
+        width: calc(
+          (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
+        );
+      }
+    }
+    // &.deceased {
     //   margin-left: px2vw($bdw, $vw);
-    //   width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
+    //   width: calc(100% / 6 * 4 - #{px2vw($bdw, $vw)});
 
     //   > .pillar {
     //     width: calc(
@@ -463,27 +489,26 @@ $default-boxdiff: 35px;
     //   }
     // }
 
-    &.hospitalized,
-    &.deceased {
-      margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 4 - #{px2vw($bdw, $vw)});
-    }
-
     &.minor,
     &.severe {
       margin-left: px2vw($bdw, $vw);
       width: calc(100% / 2 - #{px2vw($bdw, $vw)});
     }
 
-    &.recovered {
+    &.deceased {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 4 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 5 - #{px2vw($bdw, $vw)});
     }
 
-    &.unknown {
+    &.recovered {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 4 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 5 - #{px2vw($bdw, $vw)});
     }
+
+    // &.unknown {
+    //   margin-left: px2vw($bdw, $vw);
+    //   width: calc(100% / 4 - #{px2vw($bdw, $vw)});
+    // }
   }
 }
 
