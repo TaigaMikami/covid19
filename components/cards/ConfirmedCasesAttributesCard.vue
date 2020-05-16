@@ -3,7 +3,8 @@
     <data-table
       :title="$t('陽性患者の属性')"
       :title-id="'attributes-of-confirmed-cases'"
-      :chart-data="patientsTable"
+      :patients-chart-data="patientsTable"
+      :patients-per-city-chart-data="patientsPerCityTable"
       :chart-option="{}"
       :date="Patients.patients.date"
       :info="sumInfoOfPatients"
@@ -12,6 +13,9 @@
       "
       :source="$t('オープンデータを入手')"
     />
+    
+    
+     
   </v-col>
 </template>
 
@@ -21,6 +25,9 @@ import PatientsSummary from '@/data/patients_summary.json'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import DataTable from '@/components/DataTable.vue'
+
+import PatientsPerCity from '@/data/main_summary.json'
+import formatTable2 from '@/utils/formatTable2'
 
 export default {
   components: {
@@ -41,6 +48,8 @@ export default {
       }),
       unit: this.$t('人')
     }
+
+    const patientsPerCityTable = formatTable2(PatientsPerCity.main_summary.children[0].children[1].children)
 
     // 陽性患者の属性 ヘッダー翻訳
     for (const header of patientsTable.headers) {
@@ -63,13 +72,25 @@ export default {
       }
     }
 
+    for (const row of patientsPerCityTable.datasets) {
+      row['市'] = this.$t(row['市'])
+      row['入院'] = this.$t(row['入院'])
+      row['退院'] = this.$t(row['退院'])
+      row['累計患者数'] = this.$t(row['累計患者数'])
+
+      
+    }
+
     const data = {
       Patients,
       PatientsSummary,
       patientsTable,
-      sumInfoOfPatients
+      sumInfoOfPatients,
+      patientsPerCityTable
     }
     return data
+    
   }
+  
 }
 </script>
