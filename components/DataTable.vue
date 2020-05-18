@@ -8,32 +8,27 @@
     </template>
     <v-data-table
       :ref="'displayedTable'"
-      :headers="chartData.headers"
-      :items="chartData.datasets"
+      :headers="patientsChartData.headers"
+      :items="patientsChartData.datasets"
       :items-per-page="-1"
       :hide-default-footer="true"
-      :height="240"
+      :height="200"
       :fixed-header="true"
       :mobile-breakpoint="0"
       class="cardTable"
     />
-    <div class="note">
-      <ul>
-        <li>
-          {{ $t('（注）退院の基準（厚生労働省通知による）') }}
-        </li>
-        <li>
-          {{ $t('1. 患者の症状軽快後、24時間後にPCR検査を実施') }}
-        </li>
-        <li>
-          {{
-            $t(
-              '2. 1の検査で陰性が確認されたら、1の検体採取後24時間以後に再度採取を行い、2回連続で陰性が確認されたら退院可とする'
-            )
-          }}
-        </li>
-      </ul>
-    </div>
+    <v-data-table
+      :ref="'displayedTable'"
+      :headers="patientsPerCityChartData.headers"
+      :items="patientsPerCityChartData.datasets"
+      :items-per-page="-1"
+      :hide-default-footer="true"
+      :height="125"
+      :fixed-header="true"
+      :mobile-breakpoint="0"
+      class="cardTable"
+    />
+    
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
         :l-text="info.lText"
@@ -52,7 +47,7 @@
   &.v-data-table {
     box-shadow: 0 -20px 12px -12px #0003 inset;
     th {
-      padding: 8px 10px;
+      padding: 30px 10px 8px 10px;
       height: auto;
       border-bottom: 1px solid $gray-4;
       white-space: nowrap;
@@ -65,6 +60,7 @@
     }
 
     tbody {
+
       tr {
         color: $gray-1;
 
@@ -124,7 +120,11 @@ export default Vue.extend({
       type: String,
       default: ''
     },
-    chartData: {
+    patientsChartData: {
+      type: Object,
+      default: () => {}
+    },
+    patientsPerCityChartData: {
       type: Object,
       default: () => {}
     },

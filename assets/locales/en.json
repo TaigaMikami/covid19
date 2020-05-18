@@ -403,5 +403,11 @@
   "ご要望・改善提案":"Requests / Suggestions for improvement",
   "ご要望・改善提案はこちらのフォームに記載してください。":"Please fill in this form with your requests and suggestions for improvement.",
   "ご要望・改善提案フォーム":"Requests / Suggestions for improvement",
-  "※ GitHub Issuesに記載されても構いません。":"You can list them on GitHub Issues too."
+  "※ GitHub Issuesに記載されても構いません。":"You can list them on GitHub Issues too.",
+  "市":"City",
+  "入院":"Hospitalized",
+  "退院":"Discharged",
+  "累計患者数":"Total number of patients",
+  "松江市":"Matsue",
+  "出雲市":"Izumo"
 }
