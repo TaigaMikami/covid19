@@ -23,7 +23,12 @@ end
 
 def html_date
   date = doc.css('table')[0].css('tbody')[0].css('th')[21].text.gsub('日', '')
-  DateTime.new(Date.today.year, Date.today.month, date.to_i).iso8601
+  if Date.today.day == 1
+    target = Date.today - 1
+    DateTime.new(target.year, target.month, date.to_i).iso8601
+  else
+    DateTime.new(Date.today.year, Date.today.month, date.to_i).iso8601
+  end
 end
 
 if __FILE__ == $0
