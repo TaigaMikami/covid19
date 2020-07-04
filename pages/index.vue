@@ -16,17 +16,6 @@
       </div>
     </div>
     <whats-new class="mb-4" :items="newsItems" />
-    <StaticCard>
-      <p>
-        {{ $t(videoItem.text) }}
-      </p>
-      <iframe
-        :src="videoItem.url"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      />
-    </StaticCard>
     <static-info
       class="mb-4"
       :url="localePath('/contacts')"
