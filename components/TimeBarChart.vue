@@ -72,6 +72,7 @@ import DataViewBasicInfoPanel from '@/components/DataViewBasicInfoPanel.vue'
 import OpenDataLink from '@/components/OpenDataLink.vue'
 import { DisplayData, yAxesBgPlugin, scrollPlugin } from '@/plugins/vue-chart'
 import { single as color } from '@/utils/colors'
+
 type Data = {
   dataKind: 'transition' | 'cumulative'
   canvas: boolean
@@ -121,6 +122,10 @@ const options: ThisTypedComponentOptionsWithRecordProps<
 > = {
   created() {
     this.canvas = process.browser
+    this.dataKind =
+      this.$route.query.embed && this.$route.query.dataKind === 'cumulative'
+        ? 'cumulative'
+        : 'transition'
   },
   components: { DataView, DataSelector, DataViewBasicInfoPanel, OpenDataLink },
   props: {
@@ -180,9 +185,11 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       if (this.dataKind === 'transition') {
         return {
           lText: `${this.chartData.slice(-1)[0].transition.toLocaleString()}`,
-          sText: `${this.$t('実績値')}（${this.$t('前日比')}: ${
-            this.displayTransitionRatio
-          } ${this.unit}）`,
+          sText: `${this.chartData.slice(-1)[0].label} ${this.$t(
+            '実績値'
+          )}（${this.$t('前日比')}: ${this.displayTransitionRatio} ${
+            this.unit
+          }）`,
           unit: this.unit
         }
       }
@@ -323,6 +330,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     displayDataHeader() {
       if (this.dataKind === 'transition') {
         return {
+          labels: ['2020/1/1'],
           datasets: [
             {
               data: [Math.max(...this.chartData.map(d => d.transition))],
@@ -333,6 +341,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         }
       }
       return {
+        labels: ['2020/1/1'],
         datasets: [
           {
             data: [Math.max(...this.chartData.map(d => d.cumulative))],
@@ -431,11 +440,10 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       return options
     },
     scaledTicksYAxisMax() {
-      const yAxisMax = 1.2
       const dataKind =
         this.dataKind === 'transition' ? 'transition' : 'cumulative'
       const values = this.chartData.map(d => d[dataKind])
-      return Math.max(...values) * yAxisMax
+      return Math.max(...values)
     },
     tableHeaders() {
       return [
@@ -444,7 +452,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       ]
     },
     tableData() {
-      return this.displayData.datasets![0].data!.map((_, i) => {
+      return this.displayData.datasets![0].data!.map((_: any, i: number) => {
         return {
           text: this.displayData.labels![i] as string,
           '0': this.displayData.datasets![0].data![i] as number
