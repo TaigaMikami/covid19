@@ -1,19 +1,19 @@
 {
-  "lastUpdate": "2020/07/22 11:12",
+  "lastUpdate": "2020/07/22 16:00",
   "main_summary": {
-    "date": "2020/07/15 00:00",
+    "date": "2020/07/22 16:00",
     "children": [
       {
         "attr": "陽性患者数",
-        "value": 25,
+        "value": 26,
         "children": [
           {
             "attr": "入院中",
-            "value": 1,
+            "value": 2,
             "children": [
               {
                 "attr": "軽症・中等症",
-                "value": 1
+                "value": 2
               },
               {
                 "attr": "重症",
