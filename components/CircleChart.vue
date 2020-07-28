@@ -164,7 +164,8 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       return this.formatDayBeforeRatio(lastDay - lastDayBefore)
     },
     displayInfo() {
-      const rateOfUsed = this.chartData[8].cumulative
+      // 合計人数
+      const rateOfUsed = this.chartData[9].cumulative
       return {
         lText: rateOfUsed.toLocaleString(),
         sText: this.info,
@@ -174,7 +175,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     displayData() {
       // const colorArray = ['#006400', '#ccc']
       const colorArray = [
-        '#f5f5f5',
+        '#d7eeff',
         '#defcf9',
         '#e0f9b5',
         '#ffde7d',
@@ -182,7 +183,8 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         '#b83b5e',
         '#6a2c70',
         '#364f6b',
-        '#393e46'
+        '#393e46',
+        '#e5e5e5'
       ]
       return {
         labels: this.chartData.map((_d: any, index) => {
