@@ -91,7 +91,7 @@
             </div>
           </div>
         </li>
-        <!--
+        
         <li :class="[$style.box, $style.unknown]">
           <div :class="$style.pillar_unknown">
             <div :class="$style.content">
@@ -103,7 +103,7 @@
             </div>
           </div>
         </li>
-        -->
+       
       </ul>
     </li>
   </ul>
@@ -230,15 +230,15 @@ $default-boxdiff: 35px;
   border: $default-bdw solid $pink-1;
 }
 
-// .pillar_unknown {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-end;
-//   flex: 0 0 auto;
-//   text-align: center;
-//   width: 100%;
-//   border: $default-bdw solid $gray-3;
-// }
+.pillar_unknown {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  text-align: center;
+  width: 100%;
+  border: $default-bdw solid $gray-3;
+}
 
 .group {
   display: flex;
