@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2020\/08\/11",
+        "url": "https://www3.nhk.or.jp/news/html/20200810/k10012561521000.html",
+        "text": "松江 3人の感染確認 いずれもクラスター発生の私立高校生徒ら"
+      },
+      {
         "date": "2020\/08\/10",
         "url": "https://www.sanin-chuo.co.jp/www/contents/1596998050087/index.html",
         "text": "立正大淞南高　国内最大級 校内感染か"
