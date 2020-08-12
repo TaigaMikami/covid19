@@ -1,11 +1,11 @@
 {
   "lastUpdate": "2020/08/12 11:34",
   "main_summary": {
-    "date": "2020/08/11 10:00",
+    "date": "2020/08/12 15:00",
     "children": [
       {
         "attr": "陽性患者数",
-        "value": 126,
+        "value": 130,
         "children": [
           {
             "attr": "入院中",
@@ -51,7 +51,7 @@
           },
           {
             "attr": "不明",
-            "value": 97
+            "value": 101
           }
         ]
       }
