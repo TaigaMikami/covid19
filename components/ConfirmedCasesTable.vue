@@ -238,6 +238,7 @@ $default-boxdiff: 35px;
   text-align: center;
   width: 100%;
   border: $default-bdw solid $gray-3;
+  color: $gray-3;
 }
 
 .group {
