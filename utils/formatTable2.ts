@@ -2,21 +2,27 @@ const headers = [
     { text: '市', value: '市' },
     { text: '入院', value: '入院' },
     { text: '退院', value: '退院' },
+    { text: '不明', value: '不明' },
     { text: '累計患者数', value: '累計患者数' }
+
   ]
   
   type DataType = {
       市: string
       入院: number 
       退院: number 
+      不明: number
       累計患者数: number
+      
   }
   
   type TableDataType = {
       市: DataType['市']
       入院: DataType['入院']
       退院: DataType['退院']
+      不明: DataType['不明']
       累計患者数: DataType['累計患者数']
+      
   }
   
   type TableDateType = {
@@ -39,7 +45,9 @@ const headers = [
           市: d['市'],
           入院: d['入院'], 
           退院: d['退院'],
+          不明: d['不明'],
           累計患者数: d['累計患者数']
+         
       }
       tableDate.datasets.push(TableRow)
     })

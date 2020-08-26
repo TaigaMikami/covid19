@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2020\/08\/25",
+        "url": "https://www3.nhk.or.jp/news/html/20200825/k10012583871000.html",
+        "text": "島根 新型コロナ 1人感染 県内計137人に"
+      },
+      {
         "date": "2020\/08\/23",
         "url": "https://www3.nhk.or.jp/news/html/20200823/k10012580281000.html",
         "text": "島根 松江で新たに1人感染確認 新型コロナ 県内計135人に"
