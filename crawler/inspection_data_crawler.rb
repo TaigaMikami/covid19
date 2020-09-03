@@ -14,16 +14,15 @@ def doc
 end
 
 def insperson
-  doc.css('table')[1].css('tbody')[0].css('th')[22].text.gsub('人', '')
+  doc.css('table')[0].css('tbody')[0].css('th')[22].text.gsub('人', '')
 end
 
 def positive_insperson
-  doc.css('table')[1].css('tbody')[0].css('th')[23].text.gsub('人', '')
+  doc.css('table')[0].css('tbody')[0].css('th')[23].text.gsub('人', '')
 end
 
 def html_date
-  binding.pry
-  date = doc.css('table')[1].css('tbody')[0].css('th')[21].text.gsub('日', '')
+  date = doc.css('table')[0].css('tbody')[0].css('th')[21].text.gsub(/[1-9]+月/, '').gsub('日', '')
   if Date.today.day == 1
     target = Date.today - 1
     DateTime.new(target.year, target.month, date.to_i).iso8601
