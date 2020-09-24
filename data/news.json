@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2020\/09\/24",
+        "url": "https://news.yahoo.co.jp/articles/7b1beda0de6fad46d60e8b7a864b0643372759fc",
+        "text": "島根県浜田市で50代男性が新型コロナ感染　県内では約1カ月ぶり"
+      },
+      {
         "date": "2020\/08\/25",
         "url": "https://www3.nhk.or.jp/news/html/20200825/k10012583871000.html",
         "text": "島根 新型コロナ 1人感染 県内計137人に"
