@@ -65,6 +65,17 @@
                 </div>
               </div>
             </li>
+            <!-- <li :class="[$style.box, $style.short, $style.severe]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <span>{{ $t('その他') }}</span>
+                  <span>
+                    <strong>{{ その他 }}</strong>
+                    <span :class="$style.unit">{{ $t('人') }}</span>
+                  </span>
+                </div>
+              </div>
+            </li> -->
           </ul>
         </li>
         <li :class="[$style.box, $style.deceased]">
@@ -144,6 +155,10 @@ export default Vue.extend({
       required: true
     },
     不明: {
+      type: Number,
+      required: true
+    },
+    その他: {
       type: Number,
       required: true
     }

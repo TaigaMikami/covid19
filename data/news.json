@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2020\/09\/25",
+        "url": "https://news.yahoo.co.jp/articles/c2dfa5714d897dcde735018650d721030b758b05",
+        "text": "島根県安来市で新たに1人感染　新型コロナ、同市確認は初"
+      },
+      {
         "date": "2020\/09\/24",
         "url": "https://news.yahoo.co.jp/articles/7b1beda0de6fad46d60e8b7a864b0643372759fc",
         "text": "島根県浜田市で50代男性が新型コロナ感染　県内では約1カ月ぶり"

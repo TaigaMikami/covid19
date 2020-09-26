@@ -294,6 +294,10 @@ $data['main_summary'] = [
             [
               'attr' => '重症',
               'value' => $better_patients_summary['data']['重症']->sum()
+            ],
+            [
+              'attr' => 'その他',
+              'value' => $better_patients_summary['data']['その他']->sum()
             ]
           ]
         ],
