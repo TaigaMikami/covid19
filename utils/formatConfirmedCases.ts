@@ -17,6 +17,10 @@ type DataType = {
             {
               attr: '重症'
               value: number
+            },
+            {
+              attr: 'その他'
+              value: number
             }
           ]
         },
@@ -46,6 +50,7 @@ type ConfirmedCasesType = {
   死亡: number
   退院: number
   不明: number
+  その他: number
 }
 
 /**
@@ -62,7 +67,8 @@ export default (data: DataType) => {
     重症: data.children[0].children[0].children[1].value,
     死亡: data.children[0].children[2].value,
     退院: data.children[0].children[1].value,
-    不明: data.children[0].children[3].value
+    不明: data.children[0].children[3].value,
+    その他: data.children[0].children[0].children[2].value
   }
   return formattedData
 }
