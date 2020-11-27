@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2020\/11\/27",
+        "url": "https://www.chugoku-np.co.jp/local/news/article.php?comment_id=703390&comment_sub_id=0&category_id=256",
+        "text": "島根県松江市で1人感染　新型コロナ、鳥取県西部の感染者の接触者"
+      },
+      {
         "date": "2020\/11\/26",
         "url": "https://www3.nhk.or.jp/news/html/20201126/k10012731471000.html",
         "text": "島根県 新型コロナ 1人感染確認 県内計144人に"
