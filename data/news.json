@@ -1,16 +1,37 @@
 {
     "newsItems": [
       {
-        "date": "2020\/12\/03",
+        "date": "2020\/12\/7",
+        "url": "https://www3.nhk.or.jp/news/html/20201207/k10012749741000.html",
+        "text": "島根県 新型コロナ 新たに1人感染確認 県内計158人"
+      },
+      {
+        "date": "2020\/12\/6",
+        "url": "https://news.yahoo.co.jp/articles/af58ac1bf14e89ceb04030f595592664e2bef912",
+        "text": "【速報】新型コロナ　島根県立中央病院の看護師が感染"
+      },
+      {
+        "date": "2020\/12\/6",
+        "url": "https://www.fnn.jp/articles/-/116148",
+        "text": "島根県内あらたに２人感染　松江では１４８例目会食でまた・・"
+      },
+      {
+        "date": "2020\/12\/5",
+        "url": "https://www3.nhk.or.jp/news/html/20201205/k10012747481000.html",
+        "text": "松江 新型コロナ 新たに1人感染確認 島根県内計153人"
+      },
+      {
+        "date": "2020\/12\/3",
         "url": "https://news.yahoo.co.jp/articles/649e19ce908a8cdfdbe7f087bae44f7786eabb76",
         "text": "【速報】島根県安来市で2人感染、新型コロナ　大阪府在住者の濃厚接触者"
-      },{
-        "date": "2020\/12\/03",
+      },
+      {
+        "date": "2020\/12\/3",
         "url": "https://www.chugoku-np.co.jp/local/news/article.php?comment_id=705555&comment_sub_id=0&category_id=256",
         "text": "【速報】島根県松江市で２人感染　新型コロナ"
       },
       {
-        "date": "2020\/12\/01",
+        "date": "2020\/12\/1",
         "url": "https://www.chugoku-np.co.jp/local/news/article.php?comment_id=704739&comment_sub_id=0&category_id=256",
         "text": "島根県松江市で１人感染　１日の新型コロナ、県外への移動複数回"
       },
