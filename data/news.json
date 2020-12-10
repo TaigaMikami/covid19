@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2020\/12\/10",
+        "url": "https://www3.nhk.or.jp/news/html/20201210/k10012756241000.html",
+        "text": "島根 新型コロナ 新たに1人感染確認 県内計159人に"
+      },
+      {
         "date": "2020\/12\/7",
         "url": "https://www3.nhk.or.jp/news/html/20201207/k10012749741000.html",
         "text": "島根県 新型コロナ 新たに1人感染確認 県内計158人"
