@@ -1,6 +1,15 @@
 {
     "newsItems": [
       {
+        "date": "2020\/12\/14",
+        "url": "https://www.sanin-chuo.co.jp/www/contents/1607910248309/index.html",
+        "text": "【速報】安来、出雲の２人が感染【動画あり】"
+      },{
+        "date": "2020\/12\/13",
+        "url": "https://www.sanin-chuo.co.jp/www/contents/1607824029261/index.html",
+        "text": "【速報】安来市の３０代女性が感染【動画あり】"
+      },
+      {
         "date": "2020\/12\/10",
         "url": "https://news.yahoo.co.jp/articles/fd078c9cfe26f229bb3a8e32e8f815fcba980da5",
         "text": "【速報】新型コロナ・島根大学医学部関連でクラスター　新たに６人の感染確認（出雲）　"
