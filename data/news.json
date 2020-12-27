@@ -1,6 +1,31 @@
 {
     "newsItems": [
       {
+        "date": "2020\/12\/27",
+        "url": "https://www.chugoku-np.co.jp/local/news/article.php?comment_id=713234&comment_sub_id=0&category_id=256",
+        "text": "【速報】島根県浜田市と出雲市で各１人感染　27日の新型コロナ"
+      },
+      {
+        "date": "2020\/12\/27",
+        "url": "https://www.chugoku-np.co.jp/local/news/article.php?comment_id=713230&comment_sub_id=0&category_id=256",
+        "text": "【速報】島根県松江市で６人感染　27日の新型コロナ"
+      },
+      {
+        "date": "2020\/12\/26",
+        "url": "https://www.chugoku-np.co.jp/local/news/article.php?comment_id=713022&comment_sub_id=0&category_id=256",
+        "text": "島根県、26日は４人感染　新型コロナ　出雲市の１人はクラスター関連"
+      },
+      {
+        "date": "2020\/12\/25",
+        "url": "https://www3.nhk.or.jp/news/html/20201225/k10012783441000.html",
+        "text": "島根 新型コロナ 松江で1人感染確認 県内計190人に"
+      },
+      {
+        "date": "2020\/12\/24",
+        "url": "https://www3.nhk.or.jp/news/html/20201224/k10012781291000.html",
+        "text": "島根 新型コロナ 3人感染確認 県内計189人に"
+      },
+      {
         "date": "2020\/12\/23",
         "url": "https://www.chugoku-np.co.jp/local/news/article.php?comment_id=711962&comment_sub_id=0&category_id=256",
         "text": "島根県松江市で５人感染、市内の飲食店で会食　新型コロナ"
