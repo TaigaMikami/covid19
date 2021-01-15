@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2021\/01\/10",
+        "url": "https://www.fnn.jp/articles/-/129273",
+        "text": "【速報】新型コロナ　島根県で新たに３人の感染確認"
+      },
+      {
         "date": "2021\/01\/02",
         "url": "https://www3.nhk.or.jp/news/html/20210102/k10012793581000.html",
         "text": "島根 新型コロナ 安来市で4人感染確認 県内計213人に"
