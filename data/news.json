@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2021\/01\/16",
+        "url": "https://www.chugoku-np.co.jp/local/news/article.php?comment_id=718421&comment_sub_id=0&category_id=256",
+        "text": "島根県松江市で１人感染　県外在住陽性者の濃厚接触者　１６日の新型コロナ"
+      },
+      {
         "date": "2021\/01\/15",
         "url": "http://www.sanin-chuo.co.jp/www/contents/1610673850381/index.html",
         "text": "【速報】浜田市在住の２人が感染"
