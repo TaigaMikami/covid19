@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2021\/01\/31",
+        "url": "https://www.google.com/search?rlz=1C5CHFA_enJP885JP885&ei=pFgXYLiiCI26wAOvlIeYCQ&q=%E5%B3%B6%E6%A0%B9+%E3%82%B3%E3%83%AD%E3%83%8A+268&oq=%E5%B3%B6%E6%A0%B9+%E3%82%B3%E3%83%AD%E3%83%8A+268&gs_lcp=CgZwc3ktYWIQAzoCCAA6BAgAEB5Q2eIXWOTzF2D0-BdoAHAAeACAAaYBiAH8A5IBAzMuMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&ved=0ahUKEwi4hLriw8fuAhUNHXAKHS_KAZMQ4dUDCA0&uact=5",
+        "text": "島根県 新型コロナ 3人感染確認 県内計268人に"
+      },
+      {
         "date": "2021\/01\/16",
         "url": "https://www.chugoku-np.co.jp/local/news/article.php?comment_id=718421&comment_sub_id=0&category_id=256",
         "text": "島根県松江市で１人感染　県外在住陽性者の濃厚接触者　１６日の新型コロナ"
