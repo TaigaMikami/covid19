@@ -1,6 +1,11 @@
 {
     "newsItems": [
       {
+        "date": "2021\/02\/03",
+        "url": "https://www.fnn.jp/articles/-/139237",
+        "text": "【速報】新型コロナ　島根県で新たに２人の感染者確認　累計273人に"
+      },
+      {
         "date": "2021\/01\/31",
         "url": "https://www.google.com/search?rlz=1C5CHFA_enJP885JP885&ei=pFgXYLiiCI26wAOvlIeYCQ&q=%E5%B3%B6%E6%A0%B9+%E3%82%B3%E3%83%AD%E3%83%8A+268&oq=%E5%B3%B6%E6%A0%B9+%E3%82%B3%E3%83%AD%E3%83%8A+268&gs_lcp=CgZwc3ktYWIQAzoCCAA6BAgAEB5Q2eIXWOTzF2D0-BdoAHAAeACAAaYBiAH8A5IBAzMuMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&ved=0ahUKEwi4hLriw8fuAhUNHXAKHS_KAZMQ4dUDCA0&uact=5",
         "text": "島根県 新型コロナ 3人感染確認 県内計268人に"
